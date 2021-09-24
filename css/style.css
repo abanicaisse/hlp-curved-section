@@ -1,0 +1,415 @@
+:root {
+--pink: hsl(322, 100%, 66%);
+--light-pink: hsl(321, 100%, 78%);
+--light-red: hsl(0, 100%, 63%);
+--dark-cyan: hsl(192, 100%, 9%);
+--pale-blue: hsl(207, 100%, 98%);
+--font-poppins: 'Poppins', sans-serif;
+--font-open-sans: 'Open Sans', sans-serif;
+
+
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+h* {
+    font-family: var(--font-poppins);
+    font-weight: 700;
+}
+
+body {
+    font-family: var(--font-open-sans); 
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////// */
+a {
+    text-decoration: none;
+}
+
+.pink-btn {
+    color: white;
+    background-color: var(--pink);
+    font-size: 1rem;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+}
+
+.pink-btn:hover {
+    background-color: hsl(322, 100%, 80%);
+}
+
+/* Navbar and Hero Section */
+main {
+    margin: auto;
+    background-color: var(--pale-cyan);
+    background-image: url('../assets/images/bg-hero-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 3rem 0;
+    margin-bottom: 10rem;
+}
+
+main > * {
+    width: 85%;
+    margin: auto;
+}
+
+main > nav {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+
+main > nav > img {
+    transform: scale(.5);
+    margin-left: -3rem;
+}
+
+main > nav > a {
+    background-color: white;
+    color: var(--dark-cyan);
+    font-weight: 600;
+    font-size: 1rem;
+    display: grid;
+    place-items: center;
+    border-radius: 2rem;
+    box-shadow: 0rem 0 10px .1px var(--grayish-blue);
+    padding: 0rem 1.5rem;
+}
+
+main > nav > a:hover {
+    color: var(--grayish-blue);
+}
+
+main > .hero {
+    text-align: center;
+}
+
+main > .hero > div:nth-child(1) {
+    margin-bottom: 3rem;
+}
+
+main > .hero > div > h1 {
+    color: var(--dark-cyan);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+main > .hero > div > p {
+    color: var(--dark-cyan);
+    margin-bottom: 2rem;
+}
+
+main > .hero > div + div > img {
+    max-width: 100%;
+}
+
+/* Start section */
+.start {
+    width: 85%;
+    margin: auto;
+    position: relative;
+    display: grid;
+}
+
+    /* Description section with illustrations */
+    .start .description {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        display: grid;
+        row-gap: 2rem;
+        padding-bottom: 15rem;
+    }
+
+    .start .description img {
+        max-width: 100%;
+    }
+
+    .start .description .grow, .start .description .conversation, .start .description .users {
+        background-color: white;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+        box-shadow:
+        0px 0px 10px 1px white,
+        0px 0px 5px 1px hsl(208, 11%, 80%);
+        border-radius: .5rem;
+        padding: 2rem;
+    }
+
+    .start .description h2 {
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .start .description p {
+        color: var(--grayish-blue);
+    }
+
+    /* Start for free section */
+    .start .free {
+        width: min(100%, 27rem);
+        justify-self: center;
+        margin: auto;
+        background-color: white;
+        text-align: center;
+        box-shadow:
+        0px 0px 0px 1px white,
+        0px 0px 5px 1px hsl(208, 11%, 80%);
+        /* border: 1px solid red; */
+        border-radius: .5rem;
+        padding: 2rem .5rem;
+        position: absolute;
+        bottom: -3rem;
+
+    }
+
+    .start .free h1 {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .start .free a {
+        margin-bottom: 2rem;
+    }
+
+/* footer section  */
+footer {
+    width: 100%;
+    background-color: var(--dark-cyan);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 8rem;
+}
+
+footer > * {
+    width: 95%;
+    margin: auto;
+}
+
+.footer-logo > img > svg {
+    color: white;
+    background-color: wheat;
+}
+
+.footer-link {
+    width: 95%;
+    color: var(--pale-cyan);
+    font-size: 1rem;
+    display: flex;
+    /* gap: 2rem; */
+    flex-direction: column;
+}
+
+footer a {
+    color: var(--grayish-blue);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-link > div:nth-child(1) {
+    color: var(--grayish-blue);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.footer-link > div:nth-child(1) > span {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-link > div:nth-child(1) > span > img {
+    max-width: 100%;
+    height: 1rem;
+}
+
+.footer-link > div:nth-child(2), .footer-link > div:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-link > div:nth-child(3) {
+    margin-bottom: 2rem;
+}
+
+.footer-link > div:nth-child(4) {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.footer-link > div:nth-child(4) > a {
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--pale-cyan);
+    color: white;
+    border-radius: 50%;
+    padding: .5rem;
+}
+
+.footer-link > div:nth-child(4) > a:hover {
+    text-decoration: none;
+    color: var(--pink);
+    border-color: var(--pink);
+}
+
+footer > p {
+    color: var(--grayish-blue);
+    text-align: center;
+    font-size: 1rem;
+}
+
+footer > p a {
+    color: var(--pale-cyan);
+}
+
+footer > p + p {
+    margin-bottom: 1rem;
+}
+
+    /* footer logo  */
+.footer-logo {
+    width: 95%;
+}
+
+.footer-logo svg {
+    transform: scale(.7);
+    margin-left: -2.5rem;
+}
+
+.footer-logo svg > g > path {
+    fill: white;
+}
+
+
+@media screen and (max-width: 360px) {
+    main > nav > a {
+        font-size: .6rem;
+        padding: 0rem .2rem;
+    }
+
+    .pink-btn {
+        color: white;
+        /* background-color: var(--pink); */
+        font-size: 1rem;
+        border-radius: 2rem;
+        padding: 1rem .5rem;
+    }
+
+}
+
+/* for screens above 1200px  */
+@media screen and (min-width: 1200px) {
+    /* Navbar and Hero Section */
+    main {
+        background-image: url('../assets/images/bg-hero-desktop.svg');
+    }
+
+    main > nav {
+        width: min(85%, 75rem);
+    }
+
+    main > nav > img {
+        margin-left: -4rem;
+    }
+
+    main > * {
+        width: min(85%, 75rem);
+        margin: auto;
+    }
+
+    main > .hero {
+        width: min(85%, 75rem);
+        text-align: left;
+        display: flex;
+        gap: 3rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    main > .hero > div {
+        width: 45%;
+    }
+
+    main > .hero > div + div {
+        width: 55%;
+    }
+
+    main > .hero > div > h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+
+main > .hero > div > p {
+    margin-bottom: 3rem;
+}
+
+    /* Start section */
+    .start {
+        width: min(85%, 75rem);
+    }
+
+        .start .description .grow, .start .description .conversation, .start .description .users {
+            text-align: left;
+            flex-direction: row;
+            gap: 5rem;
+            align-items: center;
+            padding-left: 5rem;
+        }
+
+        .start .description .conversation{
+            flex-direction: row-reverse;
+        }
+
+
+    /* footer section  */
+    footer > * {
+        width: min(85%, 75rem);
+        margin: auto;
+    }
+
+    .footer-logo {
+        width: min(85%, 75rem);
+    }
+
+    .footer-link {
+        width: min(85%, 75rem);
+        color: var(--pale-cyan);
+        font-size: 1rem;
+        display: grid;
+        grid-template-columns: 40% 15% 15% 15%;
+        column-gap: 5rem;
+        justify-content: space-between;
+    }
+
+    .footer-link > div:nth-child(4) {
+        align-items: baseline;
+    }
+
+    footer > div + p {
+        text-align: right;
+        margin-bottom: 3rem;
+    }
+
+
+}
