@@ -94,7 +94,7 @@ main > .hero {
 }
 
 main > .hero > div:nth-child(1) {
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
 }
 
 main > .hero > div:nth-child(1) > h1 {
@@ -108,7 +108,7 @@ main > .hero > div > p {
 }
 
 main > .hero > div + div {
-    margin-bottom: 10rem;
+    margin-bottom: 7rem;
 }
 
 main > .hero > div + div > img {
@@ -169,7 +169,7 @@ main .stats > div:nth-child(2) > h1::before {
     display: grid;
 }
 
-.start > * > * {
+.start > * > * > * {
     width: 85%;
     margin: auto;
 }
@@ -187,59 +187,47 @@ main .stats > div:nth-child(2) > h1::before {
     max-width: 100%;
 }
 
-.start .grow, .start .conversation, .start .users {
-    /* background-color: wheat; */
+.start .grow > img + img, .start .conversation > img + img, .start .users > img + img{
+    display: none;
+}
+
+.start > * > img {
+    width: 100%;
+}
+
+.start .grow, .start .conversation, .start .users{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid red;
+}
+
+.start > .conversation .content {
+    background-color: white;
+}
+
+.start > * .content {
+    background-color: #F6FBFF;
     display: flex;
     flex-direction: column-reverse;
     gap: 5rem;
+    padding: 5rem 0;
 }
 
-.start .grow {
+.start .grow .content {
     padding-top: 5rem;
-    padding-bottom: 5rem;
-    background-color: #F6FBFF;
-}
-
-.start .grow::after {
-    content: url("../assets/images/bg-section-bottom-mobile-1.svg");
-    position: absolute;
-    bottom: -3rem;
-
-}
-
-.start .conversation {
-    padding-top: 10rem;
-    padding-bottom: 15rem;
-}
-
-.start .conversation::after {
-    content: url("../assets/images/bg-section-top-mobile-2.svg");
-    position: absolute;
-    bottom: 0;
-}
-
-.start .users {
-    background-color: #F6FBFF;
-    padding-top: 1rem;
-    padding-bottom: 5rem;
-}
-
-.start .users::after {
-    content: url("../assets/images/bg-section-bottom-mobile-2.svg");
-    position: absolute;
-    bottom: -6rem;
+    padding-bottom: 2rem;
 }
 
 
 /* Start for free section */
 .start .free {
-    width: 100%;
+    width: 85%;
     justify-self: center;
     margin: auto;
     text-align: center;
-    padding-top: 10rem;
-    padding-bottom: 15rem;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
 }
 
 .start .free h1 {
@@ -249,6 +237,7 @@ main .stats > div:nth-child(2) > h1::before {
 }
 
 .start .free a {
+    display: inline;
     margin-bottom: 2rem;
 }
 
@@ -258,20 +247,12 @@ footer {
     width: 100%;
     color: white;
     position: relative;
-    background-color: var(--dark-cyan);
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding-top: 4rem;
+    padding-top: 5rem;
 }
 
-footer::before {
-    content: url(../assets/images/bg-footer-top-mobile.svg);
-    position: absolute;
-    top: -3rem;
-}
-
-footer > * {
+footer > * > *{
     width: 85%;
     margin: auto;
 }
@@ -284,14 +265,23 @@ footer a:hover {
     text-decoration: underline;
 }
 
-
-
 footer > p {
     text-align: center;
     font-size: 1rem;
 }
 
+footer > img + img { /* Curves */
+    display: none;
+}
 
+/* footer content  */
+.footer {
+    background-color: var(--dark-cyan);
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    padding-top: 3rem;
+}
 
     /* Top part of the footer  */
 .top-footer {
@@ -386,102 +376,5 @@ footer > p {
         border-radius: 2rem;
         padding: 1rem .5rem;
     }
-
-}
-
-/* for screens above 1200px  */
-@media screen and (min-width: 1200px) {
-    /* Navbar and Hero Section */
-    main {
-        background-image: url('../assets/images/bg-hero-desktop.svg');
-    }
-
-    main > nav {
-        width: min(85%, 75rem);
-    }
-
-    main > nav > img {
-        margin-left: -4rem;
-    }
-
-    main > * {
-        width: min(85%, 75rem);
-        margin: auto;
-    }
-
-    main > .hero {
-        width: min(85%, 75rem);
-        text-align: left;
-        display: flex;
-        gap: 3rem;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    main > .hero > div {
-        width: 45%;
-    }
-
-    main > .hero > div + div {
-        width: 55%;
-    }
-
-    main > .hero > div > h1 {
-        font-size: 2.5rem;
-        font-weight: 600;
-        margin-bottom: 2rem;
-    }
-
-main > .hero > div > p {
-    margin-bottom: 3rem;
-}
-
-    /* Start section */
-    .start {
-        width: min(85%, 75rem);
-    }
-
-        .start .description .grow, .start .description .conversation, .start .description .users {
-            text-align: left;
-            flex-direction: row;
-            gap: 5rem;
-            align-items: center;
-            padding-left: 5rem;
-        }
-
-        .start .description .conversation{
-            flex-direction: row-reverse;
-        }
-
-
-    /* footer section  */
-    footer > * {
-        width: min(85%, 75rem);
-        margin: auto;
-    }
-
-    .footer-logo {
-        width: min(85%, 75rem);
-    }
-
-    .footer-link {
-        width: min(85%, 75rem);
-        color: var(--pale-cyan);
-        font-size: 1rem;
-        display: grid;
-        grid-template-columns: 40% 15% 15% 15%;
-        column-gap: 5rem;
-        justify-content: space-between;
-    }
-
-    .footer-link > div:nth-child(4) {
-        align-items: baseline;
-    }
-
-    footer > div + p {
-        text-align: right;
-        margin-bottom: 3rem;
-    }
-
 
 }
