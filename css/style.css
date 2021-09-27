@@ -302,7 +302,7 @@ footer > img + img { /* Curves */
 
 .top-footer .left .logo > svg {
     transform: scale(.7);
-    margin-left: -3rem;
+    margin-left: -4rem;
 }
 
 .top-footer .left .logo > svg > g > path {
@@ -359,6 +359,192 @@ footer > img + img { /* Curves */
     text-align: center;
     margin-bottom: 2rem;
 }
+
+
+@media screen and (min-width: 1200px) {
+    /* Navbar and Hero Section */
+    main {
+        padding-top: 2rem;
+    }
+
+    main > * {
+        width: min(85%, 75rem);
+        margin: auto;
+    }
+
+    main > nav {
+        width: min(85%, 75rem);
+    }
+
+        /* hero section: text with mocup img */
+    main > .hero {
+        text-align: center;
+    }
+
+    main > .hero > div:nth-child(1) > h1 {
+        font-size: 2.5rem;
+    }
+
+    main > .hero > div > p {
+        padding: 0 18rem;
+    }
+
+        /* Stats section  */
+    main > .stats {
+        width: 100%;
+        background-image: url('../assets/images/bg-section-top-desktop-1.svg');
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 15rem;
+    }
+
+    main > .stats > * {
+        width: min(85%, 75rem);
+    }
+
+    /* Start section */
+    .start {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        position: relative;
+        display: grid;
+    }
+
+    .start > * > * > * {
+        width: min(85%, 75rem);
+        margin: auto;
+    }
+
+    .start h2 {
+        font-size: 2rem;
+    }
+
+    .start img {
+        max-width: 100%;
+    }
+
+    .start .grow > div + img, .start .conversation > div + img, .start .users > div + img {
+        display: none;
+    }
+
+    .start .grow > img + img, .start .conversation > img + img, .start .users > img + img{
+        display: initial;
+        width: 100%;
+    }
+
+    .start .grow, .start .conversation, .start .users{
+        border-bottom: 2px solid red;
+        border-top: 2px solid red;
+    }
+
+    .start > .conversation .content {
+        background-color: white;
+        flex-direction: row-reverse;
+        padding: 5rem 5rem;
+    }
+
+    .start > * .content {
+        flex-direction: row;
+        gap: 5rem;
+        padding: 2rem 5rem;
+    }
+
+    /* Start for free section */
+    .start .free {
+        width: min(85%, 75rem);
+        padding-bottom: 5rem;
+    }
+
+
+    /* footer section  */
+    footer > * > *{
+        width: min(85%, 75rem);
+        /* margin: auto; */
+    }
+
+    footer > img:nth-child(1) {
+        display: none;
+    }
+
+    footer > img + img { /* Curves */
+        display: initial;
+    }
+
+    /* footer content  */
+        /* Top part of the footer  */
+    .top-footer {
+        display: grid;
+        grid-template-columns: 45% 45%;
+        justify-content: space-between;
+        gap: 0rem;
+    }
+
+    .top-footer .left {
+        display: grid;
+        row-gap: .5rem;
+    }
+
+    .top-footer .left > div > p {
+        padding-right: 10rem;
+    }
+
+    .top-footer .right {
+        display: grid;
+        align-self: baseline;
+        row-gap: 2rem;
+        padding-left: 0rem;
+    }
+
+    .top-footer .right > div > h1 {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+
+    .top-footer .right > div > p {
+        padding-right: 7rem;
+    }
+
+    .top-footer .right > div + div > form {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .top-footer .right > div + div input {
+        margin-bottom: 0;
+    }
+
+
+    .top-footer .right > div + div p {
+        align-items: center;
+    }
+
+        /* bottom part of the footer  */
+    .bottom-footer {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
