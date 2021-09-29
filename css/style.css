@@ -27,6 +27,10 @@ h* {
     font-weight: 700;
 }
 
+p {
+    font-family: var(--font-open-sans);
+}
+
 .pink-btn {
     color: white;
     background-color: var(--pink);
@@ -123,15 +127,16 @@ main > .stats {
     background-size: 100% ;
     background-position: bottom center;
     text-align: center;
+    padding-bottom: 10rem;
+}
+
+main > .stats > div {
+    width: 85%;
+    margin: auto;
     display: flex;
     flex-direction: column;
     gap: 5rem;
     align-items: center;
-    padding-bottom: 10rem;
-}
-
-main > .stats > * {
-    width: 85%;
 }
 
 main > .stats h1 {
@@ -146,14 +151,14 @@ main .stats p {
     opacity: .7;
 }
 
-main .stats > div:nth-child(1) > h1::before {
+main .stats > div > div:nth-child(1) > h1::before {
     content: url("../assets/images/icon-communities.svg");
     position: absolute;
     top: -3rem;
     width: 2rem;
 }
 
-main .stats > div:nth-child(2) > h1::before {
+main .stats > div > div:nth-child(2) > h1::before {
     content: url("../assets/images/icon-messages.svg");
     position: absolute;
     top: -3rem;
@@ -169,9 +174,10 @@ main .stats > div:nth-child(2) > h1::before {
     display: grid;
 }
 
-.start > * > * > * {
-    width: 85%;
+.start > * > div  {
+    width: 100%;
     margin: auto;
+    background-color: #F6FBFF;
 }
 
 .start h2 {
@@ -180,7 +186,8 @@ main .stats > div:nth-child(2) > h1::before {
 }
 
 .start p {
-    /* color:; */
+    color: var(--dark-cyan);
+    opacity: .7;
 }
 
 .start img {
@@ -199,14 +206,15 @@ main .stats > div:nth-child(2) > h1::before {
     position: relative;
     display: flex;
     flex-direction: column;
-    border-bottom: 2px solid red;
 }
 
-.start > .conversation .content {
+.start > .conversation > div, .start > .conversation > div .content {
     background-color: white;
 }
 
-.start > * .content {
+.start > * > div .content {
+    width: 85%;
+    margin: auto;
     background-color: #F6FBFF;
     display: flex;
     flex-direction: column-reverse;
@@ -258,7 +266,7 @@ footer > * > *{
 }
 
 footer a {
-    /* color: var(--grayish-blue); */
+    color: white;
 }
 
 footer a:hover {
@@ -292,7 +300,7 @@ footer > img + img { /* Curves */
 
 .top-footer .left {
     display: grid;
-    row-gap: .5rem;
+    row-gap: 1rem;
 }
 
    /* footer logo  */
@@ -317,6 +325,16 @@ footer > img + img { /* Curves */
 .top-footer .left .links > div {
     display: flex;
     gap: 1rem;
+}
+
+.top-footer .left .socials {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.top-footer .left .socials .fab:hover {
+   color: lightskyblue;
 }
 
 
@@ -386,20 +404,22 @@ footer > img + img { /* Curves */
     }
 
     main > .hero > div > p {
-        padding: 0 18rem;
+        width: min (85%, 75rem);
+        padding: 0 20rem;
     }
 
         /* Stats section  */
     main > .stats {
         width: 100%;
-        background-image: url('../assets/images/bg-section-top-desktop-1.svg');
-        flex-direction: row;
-        justify-content: space-between;
+        background-image: url("../assets/images/bg-section-top-desktop-1.svg");
         padding-bottom: 15rem;
     }
 
-    main > .stats > * {
-        width: min(85%, 75rem);
+    main > .stats > div {
+        width: 64.6875rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     /* Start section */
@@ -411,9 +431,14 @@ footer > img + img { /* Curves */
         display: grid;
     }
 
-    .start > * > * > * {
+    .start > * > div {
+        background-color: #F6FBFF;
+    }
+
+    .start > * > div .content {
         width: min(85%, 75rem);
         margin: auto;
+        text-align: left;
     }
 
     .start h2 {
@@ -432,10 +457,12 @@ footer > img + img { /* Curves */
         display: initial;
         width: 100%;
     }
-
-    .start .grow, .start .conversation, .start .users{
-        border-bottom: 2px solid red;
-        border-top: 2px solid red;
+    
+    .start > * > div .content {
+        flex-direction: row;
+        gap: 5rem;
+        align-items: center;
+        padding: 2rem 5rem;
     }
 
     .start > .conversation .content {
@@ -444,11 +471,6 @@ footer > img + img { /* Curves */
         padding: 5rem 5rem;
     }
 
-    .start > * .content {
-        flex-direction: row;
-        gap: 5rem;
-        padding: 2rem 5rem;
-    }
 
     /* Start for free section */
     .start .free {
@@ -478,6 +500,11 @@ footer > img + img { /* Curves */
         grid-template-columns: 45% 45%;
         justify-content: space-between;
         gap: 0rem;
+    }
+
+    .top-footer .left .logo > svg {
+        /* transform: scale(.7); */
+        margin-left: -4.5rem;
     }
 
     .top-footer .left {
